@@ -5,6 +5,7 @@ import { Box,Button,Image ,Input} from '@chakra-ui/react'
 import React from 'react'
 import heart from "../images/heart.png"
 import location from '../images/loaction.png'
+import { Link } from "react-router-dom"
 
 
 
@@ -13,11 +14,13 @@ function Header() {
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Box>
-        <Image
-          style={{ width: "200px", height: "100px" }}
-          src={logo}
-          alt="logo"
-        />
+        <Link to="/">
+          <Image
+            style={{ width: "200px", height: "100px" }}
+            src={logo}
+            alt="logo"
+          />
+        </Link>
       </Box>
       <Box
         height={"30px"}
@@ -36,9 +39,14 @@ function Header() {
           borderRadius={"10px"}
           fontSize="20px"
         />
-        <Button border={"0"} borderRadius={"0px 10px 10px 0px"} width="50px" backgroundColor={"white"}>
+        <Button
+          border={"0"}
+          borderRadius={"0px 10px 10px 0px"}
+          width="50px"
+          backgroundColor={"white"}
+        >
           <Image
-            style={{ width: "50px", height: "40px" ,backgroundColor:"white"}}
+            style={{ width: "50px", height: "40px", backgroundColor: "white" }}
             src={search}
             alt="search"
           />
@@ -70,9 +78,11 @@ function Header() {
           FirstCry Parenting
         </Button>
         <span>|</span>
-        <Button border="0px" backgroundColor={"white"}>
-          Login / Register
-        </Button>
+        <Link to="/login">
+          <Button border="0px" backgroundColor={"white"}>
+            Login / Register
+          </Button>
+        </Link>
         <span>|</span>
         <Button border="0px" backgroundColor={"white"}>
           <Image
