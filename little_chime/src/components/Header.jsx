@@ -84,22 +84,27 @@ function Header() {
           </Button>
         </Link>
         <span>|</span>
-        <Button border="0px" backgroundColor={"white"}>
-          <Image
-            style={{ width: "20px", height: "20px" }}
-            src={heart}
-            alt="heart"
-          />
-          Shortlist
-        </Button>
+        <Link to="/shortlist">
+          <Button border="0px" backgroundColor={"white"}>
+            <Image
+              style={{ width: "20px", height: "20px" }}
+              src={heart}
+              alt="heart"
+            />
+            Shortlist
+          </Button>
+        </Link>
+
         <span>|</span>
-        <Button border="0px" backgroundColor={"white"}>
-          <Image
-            style={{ width: "50px", height: "40px" }}
-            src={cart}
-            alt="cart"
-          />
-        </Button>
+        <Link to="/cart">
+          <Button border="0px" backgroundColor={"white"}>
+            <Image
+              style={{ width: "50px", height: "40px" }}
+              src={cart}
+              alt="cart"
+            />
+          </Button>
+        </Link>
       </Box>
     </div>
   );

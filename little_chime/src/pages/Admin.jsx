@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddProducts } from './addProducts';
+import { AddProducts } from '../components/AddProducts';
 
 
 

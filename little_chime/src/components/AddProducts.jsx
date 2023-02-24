@@ -2,14 +2,13 @@ import {Input,
     FormControl,
   FormLabel,
   Select,
-  FormErrorMessage,
-  FormHelperText, } from "@chakra-ui/react"
+   } from "@chakra-ui/react"
 
 
 import React from 'react'
 import axios from "axios";
 import { useReducer } from "react";
-import { useState } from "react";
+
 
 
 const initailState ={

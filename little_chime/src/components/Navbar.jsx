@@ -4,11 +4,12 @@ import{Box,
   ListItem,
   
   UnorderedList,} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import styles from  "./Navbar.module.css";
 
 
 export default function Navbar(){
-
+ const navigate = useNavigate();
 
     return (
       <Box
@@ -46,7 +47,9 @@ export default function Navbar(){
         </Box>
 
         <Box className={styles.dropdown}>
-          <Button className={styles.dropbtn}>BOYS FASHION</Button>
+          <Button onClick={() => navigate("/boys")} className={styles.dropbtn}>
+            BOYS FASHION
+          </Button>
           <Box className={styles.dropdown_content}>
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -55,7 +58,9 @@ export default function Navbar(){
         </Box>
 
         <Box className={styles.dropdown}>
-          <Button className={styles.dropbtn}>GIRLS FASHION</Button>
+          <Button onClick={() => navigate("/girls")} className={styles.dropbtn}>
+            GIRLS FASHION
+          </Button>
           <Box className={styles.dropdown_content}>
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -73,7 +78,9 @@ export default function Navbar(){
         </Box>
 
         <Box className={styles.dropdown}>
-          <Button className={styles.dropbtn}>TOYS</Button>
+          <Button onClick={() => navigate("/toys")} className={styles.dropbtn}>
+            TOYS
+          </Button>
           <Box className={styles.dropdown_content}>
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -82,7 +89,9 @@ export default function Navbar(){
         </Box>
 
         <Box className={styles.dropdown}>
-          <Button className={styles.dropbtn}>DIAPERING</Button>
+          <Button onClick={() => navigate("/diapering")} className={styles.dropbtn}>
+            DIAPERING
+          </Button>
           <Box className={styles.dropdown_content}>
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
