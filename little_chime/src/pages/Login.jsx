@@ -6,11 +6,11 @@ import {
   Text,
   Button,
   Image,
-  useToast,
+  
 } from "@chakra-ui/react";
 import facebook from "../images/facebook.png"
 import google from "../images/google.png"
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { useContext } from "react";
 import {AuthContext} from "../Context/AuthContextProvider"
@@ -24,7 +24,7 @@ const Login = () => {
   const [identity,setIdentity] = useState("");
   const [password,setPassword] = useState("");
   const [data, setData] = useState([]);
-  const toast = useToast();
+ 
   const {isAuth,login} = useContext(AuthContext);
   useEffect(()=>{
      axios.get(`http://localhost:3004/users`).then((res) => {
@@ -46,7 +46,8 @@ const Login = () => {
       }
     }); 
     if(isAuth){
-     alert("Login Successfull!")
+     alert("Login Successfull!");
+     return <Navigate to="/"/>
     }else{
       alert("Fill Credentials");
     }
