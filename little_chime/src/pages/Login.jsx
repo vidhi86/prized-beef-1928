@@ -1,19 +1,63 @@
-import React from 'react'
-import { Heading,Input,Box,Text,Button ,Image} from "@chakra-ui/react";
+import React,{useEffect, useState} from 'react'
+import {
+  Heading,
+  Input,
+  Box,
+  Text,
+  Button,
+  Image,
+  useToast,
+} from "@chakra-ui/react";
 import facebook from "../images/facebook.png"
 import google from "../images/google.png"
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useContext } from "react";
+import {AuthContext} from "../Context/AuthContextProvider"
+
 
 
 
 
 const Login = () => {
+
+  const [identity,setIdentity] = useState("");
+  const [password,setPassword] = useState("");
+  const [data, setData] = useState([]);
+  const toast = useToast();
+  const {isAuth,login} = useContext(AuthContext);
+  useEffect(()=>{
+     axios.get(`http://localhost:3004/users`).then((res) => {
+       console.log(res);
+       setData(res.data);
+     });
+  },[])
+  
+  const handleLogin = (e)=>{
+     e.preventDefault();
+    
+    data.map((el) => {
+      if (
+        el.email === identity ||
+        (el.mobile === identity && el.password === password)
+      ) {
+        
+       login(el.name);
+      }
+    }); 
+    if(isAuth){
+     alert("Login Successfull!")
+    }else{
+      alert("Fill Credentials");
+    }
+  } 
+  console.log(identity,password);
   return (
     <div style={{ width: "400px", margin: "auto" }}>
       <Heading as="h3" size="lg" textAlign={"left"}>
         Login / Register
       </Heading>
-      <form>
+      <form onSubmit={handleLogin}>
         <Text margin={0} textAlign="left" fontSize={"15px"} fontWeight="bold">
           Email ID / Mobile No.
         </Text>
@@ -24,6 +68,9 @@ const Login = () => {
           height="30px"
           placholder="email/mobile no."
           type="text||number"
+          onChange={(e) => {
+            setIdentity(e.target.value);
+          }}
         />
 
         <br />
@@ -38,6 +85,9 @@ const Login = () => {
           height="30px"
           placholder="password"
           type="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
         />
 
         <br />

@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import {useState,useReducer} from "react";
 import axios from "axios";
-import style from "./Register.module.css";
+
 
 
 const initialState = {

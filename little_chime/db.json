@@ -1,6 +1,19 @@
 {
   "users": [
-   
+    {
+      "name": "VIDHI SHARMA",
+      "mobile": "+449166993309",
+      "email": "vidhi98sharma@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "aryan sharma",
+      "mobile": "9166993309",
+      "email": "aryan1210sharma@gmail.com",
+      "password": "56789",
+      "id": 2
+    }
   ],
   "posts": [
     {
