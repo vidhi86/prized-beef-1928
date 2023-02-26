@@ -25,7 +25,8 @@ const Login = () => {
   const [password,setPassword] = useState("");
   const [data, setData] = useState([]);
  
-  const {isAuth,login} = useContext(AuthContext);
+  const {isAuth,login,userName} = useContext(AuthContext);
+  console.log(userName)
   useEffect(()=>{
      axios.get(`http://localhost:3004/users`).then((res) => {
        console.log(res);

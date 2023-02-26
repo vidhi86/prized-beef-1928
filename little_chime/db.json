@@ -20,6 +20,22 @@
       "price": "18.00",
       "rating": "★★★★☆",
       "id": 7
+    },
+    {
+      "title": "Baby 3-Piece Plaid Little Short Set",
+      "avatar": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw16336872/productimages/1O913610.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
+      "avatar2": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw38223921/productimages/1O913610_1.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
+      "price": "29.00",
+      "category": "boy",
+      "rating": "★★★☆☆",
+      "id": "11"
+    },
+    {
+      "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dwef192db3/productimages/252382.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
+      "title": "Zoo Insulated Little Kid Food Jar",
+      "price": "18.00",
+      "rating": "★★★★☆",
+      "id": 10
     }
   ],
   "cart": [
@@ -29,13 +45,6 @@
       "price": "16.50",
       "rating": "★★★★☆",
       "id": 1
-    },
-    {
-      "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dwef192db3/productimages/252382.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
-      "title": "Zoo Insulated Little Kid Food Jar",
-      "price": "18.00",
-      "rating": "★★★★☆",
-      "id": 9
     },
     {
       "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dwef192db3/productimages/252382.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
@@ -52,13 +61,6 @@
       "id": 11
     },
     {
-      "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw16336872/productimages/1O913610.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
-      "title": "Baby 3-Piece Plaid Little Short Set",
-      "price": "29.00",
-      "rating": "★★★☆☆",
-      "id": 12
-    },
-    {
       "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw2ff08d10/productimages/1O913210.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
       "title": "Baby 3-Piece Dress Me Up Set",
       "price": "35.00",
@@ -66,18 +68,25 @@
       "id": 13
     },
     {
-      "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dwff4ee721/productimages/1O541310.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
-      "title": "Baby 2-Piece Bodysuit Pant Set",
-      "price": "17.00",
-      "rating": "★★★★★",
-      "id": 14
-    },
-    {
       "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dwd5601940/productimages/1O628210.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
       "title": "Baby 2-Piece Hooded Bodysuit Pant Set",
       "price": "9.00",
       "rating": "★★★★☆",
       "id": 15
+    },
+    {
+      "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw2ff08d10/productimages/1O913210.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
+      "title": "Baby 3-Piece Dress Me Up Set",
+      "price": "35.00",
+      "rating": "★★★★☆",
+      "id": 16
+    },
+    {
+      "image": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw16336872/productimages/1O913610.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
+      "title": "Baby 3-Piece Plaid Little Short Set",
+      "price": "29.00",
+      "rating": "★★★☆☆",
+      "id": 4
     }
   ],
   "users": [
@@ -101,6 +110,20 @@
       "email": "7976296019",
       "password": "3456",
       "id": 3
+    },
+    {
+      "name": "VIDHI SHARMA",
+      "mobile": "+449166993309",
+      "email": "vidhi98sharma@gmail.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "name": "VIDHI SHARMA",
+      "mobile": "+449166993309",
+      "email": "vidhi98sharma@gmail.com",
+      "password": "sharma",
+      "id": 5
     }
   ],
   "posts": [
@@ -192,15 +215,6 @@
       "category": "girl",
       "rating": "★★★★★",
       "id": "8"
-    },
-    {
-      "title": "Baby 2-Piece Bunny Hat & Bodysuit",
-      "avatar": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dwc09d9e11/productimages/1O919010.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
-      "avatar2": "https://cdn-fsly.yottaa.net/578855e22bb0ac10350002d6/www.carters.com/v~4b.27b/dw/image/v2/AAMK_PRD/on/demandware.static/-/Sites-carters_master_catalog/default/dw50981686/productimages/1O919010_LV03.jpg?sw=800&sh=1000&sfrm=jpg&yocs=4E_4G_",
-      "price": "18.00",
-      "category": "girl",
-      "rating": "★★★☆☆",
-      "id": "9"
     },
     {
       "title": "Baby Dog Cotton Zip-Up Sleep & Play",
