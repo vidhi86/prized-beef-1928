@@ -10,7 +10,7 @@ import Boys from "./Boys"
 import { Toys } from "./Toys";
 import AdminLogin from "./AdminLogin";
 import Admin from "./Admin";
-import DrawerFunction from "../components/Drawer";
+// import DrawerFunction from "../components/Drawer";
 import PrivateRoute from "../Context/PrivateRoute";
 import SingleProductPage from "./SingleProductPage";
 import { PageNotFound } from "./PageNotFound";
@@ -35,34 +35,34 @@ import { SearchResult } from "./SearchResult";
           <Route
             path="/toys"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
               <Toys />
-              // </PrivateRoute>
+               </PrivateRoute>
             }
           ></Route>
           <Route
             path="/girls"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
               <Girls />
-              // </PrivateRoute>
+               </PrivateRoute>
             }
           ></Route>
           <Route
             path="/boys"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
               <Boys />
-              // </PrivateRoute>
+               </PrivateRoute>
             }
           ></Route>
           <Route path="/diapering" element={<Diapering />}></Route>
           <Route
             path="/cart"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
               <Cart />
-              // </PrivateRoute>
+              </PrivateRoute>
             }
           ></Route>
           <Route path="/shortlist" element={<Shortlist />}></Route>
