@@ -8,8 +8,9 @@ import {
   InputGroup,
   InputLeftAddon,
 } from "@chakra-ui/react";
-import {useState,useReducer} from "react";
+import {useReducer} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
 
 
@@ -51,13 +52,14 @@ const reducer = (state, action) => {
 ;
 
 export default function Register() {
-
+const navigate = useNavigate();
 const [state, dispatch] = useReducer(reducer, initialState);
 const handleSubmit = (e) => {
   e.preventDefault();
   axios.post(`http://localhost:3004/users`,state).then((res) => {
     console.log(res);
-   
+    alert("User Registered")
+    navigate("/login")
   });
   dispatch({ type: "reset" });
 };

@@ -31,13 +31,15 @@ function AuthContextProvider({ children }) {
         alert("Product Already Exist in Shortlist");
       });
   };
-  const apiGetData=(category,page)=>{
+  const apiGetData=(category,page,sort,order)=>{
     console.log(category);
     return axios.get(` http://localhost:3004/products`,{
       params:{
         category:category,
         _limit:9,
         _page:page,
+        _sort:sort,
+        _order:order,
       }
     });
   }

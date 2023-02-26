@@ -59,18 +59,19 @@ return (
               <Button
                 backgroundColor="white"
                 color={"#F4511E"}
-                width="100px"
+                width="150px"
                 border="0"
                 height="30px"
                 fontWeight="bolder"
                 fontSize="15px"
                 borderRadius="5px"
                 marginRight="5px"
+                marginLeft={"10px"}
                 onClick={() => {
                   AddToShortlist(el);
                 }}
               >
-                Add to Shortlist
+                <i class="fa-solid fa-heart"></i>&nbsp; Add to Shortlist
               </Button>
               <Button
                 color="white"
@@ -81,12 +82,12 @@ return (
                 fontWeight="bolder"
                 fontSize="15px"
                 borderRadius="5px"
-                marginRight="5px"
+                marginLeft={"10px"}
                 onClick={() => {
                   handleRemove(el.id);
                 }}
               >
-                Remove
+                <i class="fa-solid fa-trash"></i>&nbsp; Remove
               </Button>
             </Stack>
           </Box>
@@ -109,7 +110,7 @@ return (
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Text display={"flex"}>
           <i class="fa-solid fa-indian-rupee-sign"></i>
-          {total}
+          {total.toFixed(2)}
         </Text>
       </Box>
       <Box fontSize="15px" display={"flex"} color="#4CAF50">
@@ -117,7 +118,7 @@ return (
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Text display={"flex"}>
           <i class="fa-solid fa-indian-rupee-sign"></i>
-          {discount}
+          {discount.toFixed(2)}
         </Text>
       </Box>
       <Box fontSize="15px" color="#4CAF50" display={"flex"}>
@@ -133,7 +134,7 @@ return (
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
         <Text display={"flex"}>
           <i class="fa-solid fa-indian-rupee-sign"></i>
-          {total - discount}
+          {total - discount.toFixed(2)}
         </Text>
       </Box>
       <hr style={{ border: "1px dotted black" }} />
@@ -143,7 +144,7 @@ return (
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Text display={"flex"}>
           <i class="fa-solid fa-indian-rupee-sign"></i>
-          {total - discount}
+          {total - discount.toFixed(2)}
         </Text>
       </Box>
     </Box>
