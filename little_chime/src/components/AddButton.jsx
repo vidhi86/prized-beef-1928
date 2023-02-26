@@ -24,7 +24,7 @@ function AddButton({AddToCart,AddToShortlist,obj}) {
             AddToCart(obj);
           }}
         >
-          Add to Cart
+          <i class="fa-solid fa-cart-shopping"></i>&nbsp; Add to Cart
         </Button>
         <Button
           color="white"
@@ -40,6 +40,7 @@ function AddButton({AddToCart,AddToShortlist,obj}) {
             AddToShortlist(obj);
           }}
         >
+          <i class="fa-solid fa-heart"></i>&nbsp;
           Shortlist
         </Button>
       </Stack>

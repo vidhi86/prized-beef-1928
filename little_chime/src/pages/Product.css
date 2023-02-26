@@ -1,0 +1,16 @@
+.productBox{
+    width:80%;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+}
+@media  (max-width: 600px){
+    .productBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media  (max-width: 400px){
+    .productBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

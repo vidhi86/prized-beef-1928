@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import facebook from "../images/facebook.png"
 import google from "../images/google.png"
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useContext } from "react";
 import {AuthContext} from "../Context/AuthContextProvider"
@@ -20,7 +20,7 @@ import {AuthContext} from "../Context/AuthContextProvider"
 
 
 const Login = () => {
-
+ const navigate = useNavigate();
   const [identity,setIdentity] = useState("");
   const [password,setPassword] = useState("");
   const [data, setData] = useState([]);
@@ -47,9 +47,7 @@ const Login = () => {
     }); 
     if(isAuth){
      alert("Login Successfull!");
-     return <Navigate to="/"/>
-    }else{
-      alert("Fill Credentials");
+     navigate("/")
     }
   } 
   console.log(identity,password);

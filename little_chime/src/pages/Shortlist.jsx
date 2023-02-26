@@ -71,6 +71,7 @@ export default function Shortlist() {
                     AddToCart(el);
                   }}
                 >
+                  <i class="fa-solid fa-cart-shopping"></i>&nbsp;
                   Add to cart
                 </Button>
                 <Button
@@ -87,7 +88,7 @@ export default function Shortlist() {
                     handleRemove(el.id);
                   }}
                 >
-                  Remove
+                  <i class="fa-solid fa-trash"></i>&nbsp; Remove
                 </Button>
               </Stack>
             </Box>

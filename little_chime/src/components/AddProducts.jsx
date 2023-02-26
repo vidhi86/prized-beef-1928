@@ -2,6 +2,7 @@ import {Input,
     FormControl,
   FormLabel,
   Select,
+  Heading
    } from "@chakra-ui/react"
 
 
@@ -77,48 +78,104 @@ const handleSubmit = (e)=>{
 const {title,avatar,avatar2,price,category,rating} = state;
   return (
     <div>
+      <Heading fontSize={"50px"} fontFamily="comic-san-ms" color={"#4FC3F7"}>
+        Add Products
+      </Heading>
       <form onSubmit={handleSubmit}>
-        <FormControl>
-          <FormLabel>Title</FormLabel>
+        <FormControl w="500px" textAlign={"left"} margin={"auto"}>
+          <FormLabel
+            margin={0}
+            textAlign="left"
+            fontSize={"15px"}
+            fontWeight="bold"
+          >
+            Title
+          </FormLabel>
           <Input
             type="text"
             placeholder="tilte"
+            width="400px"
+            height="30px"
             value={title}
             onChange={(e) => {
               dispatch({ type: "title", payload: e.target.value });
             }}
           />
-          <FormLabel>Image</FormLabel>
+          <br />
+          <br></br>
+          <FormLabel
+            margin={0}
+            textAlign="left"
+            fontSize={"15px"}
+            fontWeight="bold"
+          >
+            Image
+          </FormLabel>
           <Input
             type="url"
             placeholder="image"
+            width="400px"
+            height="30px"
             value={avatar}
             onChange={(e) => {
               dispatch({ type: "avatar", payload: e.target.value });
             }}
           />
-          <FormLabel>Image 2</FormLabel>
+          <br />
+          <br></br>
+          <FormLabel
+            margin={0}
+            textAlign="left"
+            fontSize={"15px"}
+            fontWeight="bold"
+          >
+            Image 2
+          </FormLabel>
           <Input
             type="url"
             placeholder="image2"
+            width="400px"
+            height="30px"
             value={avatar2}
             onChange={(e) => {
               dispatch({ type: "avatar2", payload: e.target.value });
             }}
           />
-          <FormLabel>Price</FormLabel>
+          <br />
+          <br></br>
+          <FormLabel
+            margin={0}
+            textAlign="left"
+            fontSize={"15px"}
+            fontWeight="bold"
+          >
+            Price
+          </FormLabel>
           <Input
             type="number"
             placeholder="price"
+            width="400px"
+            height="30px"
             value={price}
             onChange={(e) => {
               dispatch({ type: "price", payload: e.target.value });
             }}
           />
-          <FormLabel>Category</FormLabel>
+          <br />
+          <br></br>
+          <FormLabel
+            margin={0}
+            textAlign="left"
+            fontSize={"15px"}
+            fontWeight="bold"
+          >
+            Category
+          </FormLabel>
           <Select
             placeholder="Category"
             value={category}
+            border="0"
+            height="30px"
             onChange={(e) => {
               dispatch({ type: "category", payload: e.target.value });
             }}
@@ -133,10 +190,22 @@ const {title,avatar,avatar2,price,category,rating} = state;
             <option>Girls</option>
             <option>Boys</option>
           </Select>
-          <FormLabel>Rating</FormLabel>
+          <br />
+          <br></br>
+          <FormLabel
+            margin={0}
+            textAlign="left"
+            fontSize={"15px"}
+            fontWeight="bold"
+          >
+            Rating
+          </FormLabel>
           <Select
             placeholder="Rating"
             value={rating}
+            border="0"
+            width="400px"
+            height="30px"
             onChange={(e) => {
               dispatch({ type: "rating", payload: e.target.value });
             }}
@@ -147,7 +216,23 @@ const {title,avatar,avatar2,price,category,rating} = state;
             <option>4</option>
             <option>5</option>
           </Select>
-          <Input type="submit"></Input>
+          <br />
+          <br></br>
+          <Input
+            width="410px"
+            backgroundColor={"#FF5722"}
+            color="white"
+            fontWeight={"bold"}
+            fontSize="15px"
+            height="40px"
+            type="submit"
+            value="Add"
+            border={0}
+            borderRadius="5px"
+            disabled={
+              title === "" || avatar === "" || avatar2 === "" || price === 0 || category===""||rating===0
+            }
+          ></Input>
         </FormControl>
       </form>
     </div>

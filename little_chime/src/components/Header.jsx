@@ -2,15 +2,32 @@ import logo from "../images/little_chime_logo.png"
 import search from "../images/search.png"
 import cart from "../images/cart.png"
 import { Box,Button,Image ,Input} from '@chakra-ui/react'
-import React from 'react'
+import React, { useState,useEffect, useContext } from 'react'
 import heart from "../images/heart.png"
 import location from '../images/loaction.png'
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
+import { AuthContext } from "../Context/AuthContextProvider"
+// import { SearchResult } from "../pages/SearchResult"
 
 
 
 
-function Header() {
+export default function Header() {
+   const [toSearch,setToSearch] = useState('');
+   const {apiGetData} = useContext(AuthContext);
+   const [data,setData] = useState([]);
+   const navigate = useNavigate();
+  //  const [searchOn,setSearchOn] = useState(false);
+  
+  // useEffect(()=>{
+  //   apiGetData(toSearch).then((res) => {
+  //     console.log(res);
+  //     setData(res.data);
+  //   });
+  // },[])
+  const handleSearch=()=>{
+    navigate(`/${toSearch}`)
+  }
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Box>
@@ -38,12 +55,17 @@ function Header() {
           placeholder="Search for category"
           borderRadius={"10px"}
           fontSize="20px"
+          onChange={(e) => {
+            console.log(toSearch)
+            setToSearch(e.target.value);
+          }}
         />
         <Button
           border={"0"}
           borderRadius={"0px 10px 10px 0px"}
           width="50px"
           backgroundColor={"white"}
+          onClick={handleSearch}
         >
           <Image
             style={{ width: "50px", height: "40px", backgroundColor: "white" }}
@@ -74,9 +96,12 @@ function Header() {
           Track Order
         </Button>
         <span>|</span>
-        <Button border="0px" backgroundColor={"white"}>
-          FirstCry Parenting
-        </Button>
+        <Link to="/admin_login">
+          <Button border="0px" backgroundColor={"white"}>
+            Admin
+          </Button>
+        </Link>
+
         <span>|</span>
         <Link to="/login">
           <Button border="0px" backgroundColor={"white"}>
@@ -105,9 +130,9 @@ function Header() {
             />
           </Button>
         </Link>
+        
       </Box>
     </div>
   );
 }
 
-export default Header

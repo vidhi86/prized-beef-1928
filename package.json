@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "framer-motion": "^10.0.0",
     "json-server": "^0.17.2",
     "react-slick": "^0.29.0"
   }

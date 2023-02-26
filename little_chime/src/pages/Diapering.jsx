@@ -4,36 +4,40 @@ import { Box, Heading, Text, Image } from "@chakra-ui/react";
 import { AuthContext } from "../Context/AuthContextProvider";
 import { Pagination } from "../components/Pagination";
 import { ProductBox } from '../components/ProductBox';
+import "./Product.css"
+import { Link } from 'react-router-dom';
+import Sorting from '../components/Sorting';
 
 function Diapering() {
   const { apiGetData } = useContext(AuthContext);
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
+  const [sort, setSort] = useState("");
+  const [order, setOrder] = useState("");
   const [totalPages, setTotalPages] = useState(0);
   const total = Math.ceil(totalPages / 9);
   console.log(totalPages, "here");
 
   useEffect(() => {
-    apiGetData("Daipers", page).then((res) => {
+    apiGetData("Daipers", page, sort, order).then((res) => {
       console.log(res.headers["x-total-count"]);
       setData(res.data);
       setTotalPages(res.headers["x-total-count"]);
     });
-  }, [page]);
+  }, [page, order]);
   const handlePage = (val) => {
     setPage(page + val);
   };
-
+  const handleSort = (sort, order) => {
+    setSort(sort);
+    setOrder(order);
+  };
   return (
-    <Box display={"flex"} width="90%" margin={"auto"}>
-      <Box width="20%" height={"300px"}></Box>
-      <Box
-        width="80%"
-        // border="1px solid black"
-        display={"grid"}
-        gridTemplateColumns={"repeat(3,1fr)"}
-        gridGap="10px"
-      >
+    <Box display={"flex"} margin={"auto"}>
+      <Box width="20%" height={"300px"}>
+        <Sorting handleSort={handleSort} />
+      </Box>
+      <Box className="productBox">
         {data.map((el) => (
           <ProductBox
             id={el.id}
